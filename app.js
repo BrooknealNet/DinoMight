@@ -25,7 +25,8 @@ function Dinosaur(name, wasSeen, fileExtension = 'png') {
 
 // random number generator that returns 1 to how ever many dinos we have
 
-// a function to make sure each dinosaur is only picked once. 
+// a function to make sure each dinosaur is only picked once. That also changes wasSeen to true. Probably easier to do
+// together
 
 // event listners for both buttons
 
