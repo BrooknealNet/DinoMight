@@ -8,3 +8,6 @@ https://github.com/orgs/BrooknealNet/projects/3/views/1
 
 Dom Model
 ![Dom Model](img/Vectordommodel.jpg)
+![Wireframe page 1](img/page1.png)
+![Wireframe page 2](img/page2.png)
+![Wireframe page 3](img/page3.png)
