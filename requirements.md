@@ -23,4 +23,4 @@ What will your MVP functionality be?
 What are your stretch goals?
 
 ## Stretch
-What stretch goals are you going to aim for?
+What stretch goals are you going to aim for? 
