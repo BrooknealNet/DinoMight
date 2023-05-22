@@ -5,3 +5,6 @@ In this project we are creating a children's game that will assess their memory 
 
 Link to Project Management Board that contains user stories:
 https://github.com/orgs/BrooknealNet/projects/3/views/1
+
+Dom Model
+![Dom Model](img/Vectordommodel.jpg)
