@@ -3,7 +3,6 @@
 // *** Globals ***
 
 
-
 // *** Constructors ***
 
 function AppState() {
@@ -12,8 +11,8 @@ function AppState() {
 
 function Dinosaur(name, wasSeen, fileExtension = 'png') {
     this.name = name;
-    this.image = 'img/${name}.${fileExtension}';
-    this.wasSeen = false;
+    this.image = `img/${name}.${fileExtension}`;
+    this.wasSeen = wasSeen;
 }
 
 // *** Helper Functions ***
