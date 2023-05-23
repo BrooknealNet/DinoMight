@@ -11,3 +11,7 @@ Dom Model
 ![Wireframe page 1](img/page1.png)
 ![Wireframe page 2](img/page2.png)
 ![Wireframe page 3](img/page3.png)
+
+References:
+Code for aboutUs.html page
+https://www.w3schools.com/howto/howto_css_about_page.asp
