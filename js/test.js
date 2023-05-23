@@ -1,15 +1,19 @@
 'use strict'
 
+// *** DOCUMENT WINDOWS ***
 let initialPage = document.getElementById('home-imgs');
+
+// *** Globals ***
 
 let app = new AppState();
 app.loadItems();
 let dinoIndexArray = [];
 
-function rndmNumGen(){
-    return Math.floor(Math.random() * app.allDinosaurs.length);
-  }
+// *** Helper Functions ***
 
+function rndmNumGen(){
+  return Math.floor(Math.random() * app.allDinosaurs.length);
+}
 
 function renderDinoImages() {
 
@@ -45,4 +49,5 @@ function renderDinoImages() {
   }
 }
 
+// this needs to be called on an event listner for the start game button
 renderDinoImages();
