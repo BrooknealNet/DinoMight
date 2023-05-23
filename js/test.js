@@ -20,7 +20,7 @@ function rndmNumGen(){
 
 function renderDinoImages() {
 
-  // gonna need a for loop to iterate through and set all wasSeen to false incase it was pulled from local storage
+  // -------- TODO gonna need a for loop to iterate through and set all wasSeen to false incase it was pulled from local storage
 
   // this populates an array with randomly selected numbers no higher than the size of the array
   while (dinoIndexArray.length < 5) {
@@ -62,5 +62,5 @@ function renderDinoImages() {
   }
 }
 
-// this needs to be called on an event listner for the start game button
+// -------- TODO this needs to be called on an event listner for the start game button
 renderDinoImages();
