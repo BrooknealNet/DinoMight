@@ -1,12 +1,13 @@
 body {
-  background-color: #EACFFF;
+  background-color:  #FBFAE5;
   color: black;
   
 }
 
 header {
   font-size:  20px;
-  background-color: #AAE9E5;
+  background-color: #4D9140;
+  color: #FBFAE5;
   width: 100%;
 }
 
@@ -62,15 +63,13 @@ main{
   display: flex;
   justify-content: space-around;
   color: #87C7F1;
-  /* position: absolute; */
-  padding-top:50%
+  padding-top:25%
 }
 
 #end-of-test {
   display: flex;
   justify-content: space-around;
   color: #87C7F1;
-  /* position: absolute; */
   padding-top:20%
 }
 
@@ -104,7 +103,7 @@ section {
 
 footer {
   text-align: center;
-  background-color: #AAE9E5;
+  background-color: #258F28;
   bottom: 0;
   position: absolute;
   width: 100%;
@@ -113,3 +112,58 @@ footer {
   margin-bottom:-130px ;
   text-align: center;
 }
+
+/* style sheet 2 */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  background-color: #E5E2B6; 
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.card img {
+  display: block;
+  margin: 0 auto;
+  width: 80%; 
+  max-width: 250px; 
+  height: auto;
+}
+
+.container {
+  padding: 16px;
+}
+
+.aboutUsSection  {
+  font-size: 24px;
+}
+
+.card img {
+  display: block;
+  margin: 0 auto;
+  width: px; 
+  height: 280px; 
+}
+
+
