@@ -40,7 +40,6 @@ nav li {
   padding-left: 2rem;
   padding-right: 2rem;
   margin: auto;
-
 }
 
 p {
@@ -49,39 +48,38 @@ p {
 
 
 main{
-  align-items: center;
+  width: 90%;
+  margin: auto;
 }
 
 #home-start {
- 
   display: flex;
   justify-content: space-around;
   color: #87C7F1;
 }
 
 #start-test {
-  display: flex;
-  justify-content: space-around;
+  width: max-content;
+  margin: auto;
   color: #87C7F1;
   padding-top:25%
 }
 
-
-section {
-  padding: 10px;
-  display: flex;
-  margin: auto;
-}
-
 #home-imgs {
   height: 10vw;
-  width: 100%;
-  padding: 5px;
+  width: max-content;
   margin: auto;
-  justify-content: space-evenly;
   display: grid;
-  grid-template-columns: repeat(5, 10px [col-start]);
-  
+  grid-template-columns: repeat(5,1fr);
+  column-gap: 30px;
+}
+
+tr{
+  width: 200px;
+}
+
+tr>img:hover{
+  border: 2px solid #4d9140;
 }
 
  #test-imgs{
@@ -94,17 +92,6 @@ section {
   grid-template-columns: repeat(10, 10px [col-start]);
 }
 
-footer {
-  text-align: center;
-  background-color: #258F28;
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-  height: 30px;
-  padding:10px 10px 0px 10px;
-  margin-bottom:-130px ;
-  text-align: center;
-}
 
 /* style sheet 2 */
 
@@ -143,7 +130,7 @@ footer {
   max-width: 250px; 
   height: auto;
   padding-top: 30px;
-}
+} 
 
 .container {
   padding: 16px;
@@ -153,14 +140,15 @@ footer {
   font-size: 24px;
 }
 
-.card img {
+ .card img {
   display: block;
   margin: 0 auto;
   width: px; 
   height: 280px; 
-}
+} 
 
 tr>img {
   height: 200px;
   width: 200px;
 }
+
