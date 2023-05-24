@@ -1,14 +1,18 @@
 body {
-  background-color:  #FBFAE5;
+  background-color: #FBFAE5;
   color: black;
-  
+
 }
 
 header {
-  font-size:  20px;
+  font-size: 20px;
   background-color: #4D9140;
   color: #FBFAE5;
-  width: 100%;
+  height: max-content;
+}
+#page-3{
+  border:none;
+
 }
 
 h1 {
@@ -18,7 +22,7 @@ h1 {
   text-align: center;
 }
 
-h2{
+h2 {
   padding: 20px;
   margin: 10px;
   font-size: 32px;
@@ -27,7 +31,7 @@ h2{
 
 nav {
   display: flex;
-  padding: 2rem 2rem;
+  padding: 2rem 15rem;
 }
 
 nav ul {
@@ -37,32 +41,79 @@ nav ul {
 }
 
 nav li {
-  padding-left: 2rem;
+  padding-left: 1rem;
   padding-right: 2rem;
   margin: auto;
+  text-align: center;
 }
 
 p {
   text-align: center;
+  padding: 2rem;
+  margin: auto;
 }
 
 
-main{
-  width: 90%;
+main {
+  width: 99%;
   margin: auto;
 }
 
 #home-start {
-  display: flex;
-  justify-content: space-around;
-  color: #87C7F1;
+  width: max-content;
+  margin: auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#home-start button {
+  align-items: center;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: #FBFAE5;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+#home-start button:hover {
+  background-color: #555;
+
 }
 
 #start-test {
   width: max-content;
   margin: auto;
-  color: #87C7F1;
-  padding-top:25%
+  padding-top: 15%;
+  float: inline-start;
+
+}
+
+#start-test button {
+  align-items: center;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color:#FBFAE5;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+#start-test button:hover {
+  background-color: #555;
+
+}
+
+a {
+  color:#FBFAE5;
+  text-align: center;
 }
 
 #home-imgs {
@@ -70,26 +121,32 @@ main{
   width: max-content;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(5,1fr);
+  grid-template-columns: repeat(5, 1fr);
   column-gap: 30px;
 }
 
-tr{
+tr>img {
+  height: 200px;
   width: 200px;
 }
 
-tr>img:hover{
+tr {
+  width: 200px;
+}
+
+tr>img:hover {
   border: 2px solid #4d9140;
 }
 
- #test-imgs{
+#test-imgs {
+  padding-top: 5%;
+  padding-bottom: 15%;
   height: 10vw;
-  width: 100%;
-  padding: 5px;
+  width: max-content;
   margin: auto;
-  justify-content: space-evenly;
   display: grid;
-  grid-template-columns: repeat(10, 10px [col-start]);
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 30px;
 }
 
 <<<<<<< HEAD
@@ -111,7 +168,7 @@ footer {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
-  background-color: #E5E2B6; 
+  background-color: #E5E2B6;
 }
 
 .button {
@@ -119,7 +176,7 @@ footer {
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: white;
+  color: #FBFAE5;
   background-color: #000;
   text-align: center;
   cursor: pointer;
@@ -139,29 +196,20 @@ footer {
 .card img {
   display: block;
   margin: 0 auto;
-  width: 80%; 
-  max-width: 250px; 
+  width: 80%;
+  max-width: 250px;
   height: auto;
   padding-top: 30px;
-} 
+}
 
 .container {
   padding: 16px;
 }
 
-.aboutUsSection  {
-  font-size: 24px;
-}
-
- .card img {
+.card img {
   display: block;
   margin: 0 auto;
-  width: px; 
-  height: 280px; 
-} 
-
-tr>img {
-  height: 200px;
-  width: 200px;
+  width: px;
+  height: 280px;
 }
 
