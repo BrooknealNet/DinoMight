@@ -92,6 +92,19 @@ tr>img:hover{
   grid-template-columns: repeat(10, 10px [col-start]);
 }
 
+<<<<<<< HEAD
+
+footer {
+  text-align: center;
+  background-color: #258F28;
+  width: 100%;
+  height: 30px;
+  padding:10px 10px 0px 10px;
+  text-align: center;
+}
+=======
+>>>>>>> 5f667ce9fb5e9960e6d3ad8fc87cc2fcd5c38a8d
+
 
 /* style sheet 2 */
 
