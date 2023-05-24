@@ -55,7 +55,7 @@ p {
 
 
 main {
-  width: 99%;
+  width: 90%;
   margin: auto;
 }
 
@@ -149,24 +149,23 @@ tr>img:hover {
 }
 
 
-footer {
-  text-align: center;
-  background-color: #258F28;
-  width: 100%;
-  height: 30px;
-  padding:10px 10px 0px 10px;
-  text-align: center;
-}
-
-
 /* style sheet 2 */
+
+.card-container {
+  display:flex;
+  justify-content: space-between;
+
+}
 
 .card {
   display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
   background-color: #E5E2B6;
+  width: 300px;
+  display: inline;
 }
+
 
 .button {
   border: none;
@@ -203,10 +202,4 @@ footer {
   padding: 16px;
 }
 
-.card img {
-  display: block;
-  margin: 0 auto;
-  width: px;
-  height: 280px;
-}
 
