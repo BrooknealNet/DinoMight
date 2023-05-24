@@ -152,15 +152,13 @@ tr>img:hover {
   flex-wrap: wrap;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 41d140d32bf57af64ccf60d496e7e4903bd1720e
 /* style sheet 2 */
 
 .card-container {
-  display:flex;
-  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -215,3 +213,4 @@ tr>img:hover {
   font-size: 30px;
   text-align: center;
 }
+
