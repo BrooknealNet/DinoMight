@@ -3,7 +3,6 @@
 // *** DOCUMENT WINDOWS ***
 let initialPage = document.getElementById('home-imgs');
 let startBtn = document.getElementById('start-btn');
-let flag = document.getElementById('flag');
 
 // *** Globals ***
 
@@ -72,6 +71,8 @@ function renderDinoImages() {
   }
   populated = true;
 }
+
+
 
 function startBtnHandler(){
   if (populated === true){

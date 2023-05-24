@@ -120,7 +120,6 @@ a {
   height: 10vw;
   width: max-content;
   margin: auto;
-  display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 30px;
 }
@@ -163,6 +162,7 @@ footer {
 /* style sheet 2 */
 
 .card {
+  display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
   background-color: #E5E2B6;
