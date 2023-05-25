@@ -129,7 +129,7 @@ a {
 #home-imgs > tr > img {
   height: 200px;
   width: 200px;
-  animation: spin-in 350ms step-end;
+  animation: spin-in 1s step-end;
 }
 
 #quiz-images > tr > img {
