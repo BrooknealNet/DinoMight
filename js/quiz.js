@@ -51,7 +51,6 @@ function renderDinoImages() {
     console.log(app.allDinosaurs[randomIndex]);
     // This creates a table row with the image of the dinosaur in it. It also sets the alt to the dinos name so the event listner knows which was clicked.
     let heroImageRow = document.createElement('tr');
-    heroImageRow.id = 'flag';
     heroImageRow.innerHTML = `<img src="${dinoImage}" alt="${dinoTitle}">`;
     initialPage.appendChild(heroImageRow);
 
@@ -61,13 +60,8 @@ function renderDinoImages() {
             
     // this creates a table data cell with the Dinos name
     let dinoHeader = document.createElement('td');
-    dinoHeader.innerText = `Name: ${dinoTitle}`;
+    dinoHeader.innerText = `${dinoTitle}`;
     dinoRow.appendChild(dinoHeader);
-            
-    // This creates a table data cell with the dinos description
-    let dinoFacts = document.createElement('td');
-    dinoFacts.innerText = `Description: ${dinoDescrip}`;
-    dinoRow.appendChild(dinoFacts);
   }
   app.saveToLocalStorage();
   populated = true;

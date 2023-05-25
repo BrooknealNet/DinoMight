@@ -69,5 +69,4 @@ function calculateScore() {
 
 renderQuizImages();
 
-// let test = document.getElementsByClassName('dino-card');
 dinoQuiz.addEventListener('click', checkAnswer);
