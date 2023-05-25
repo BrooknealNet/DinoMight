@@ -39,8 +39,13 @@ function renderQuizImages(){
     dinoFactsQuiz.innerText = `Description: ${dinoDescripQuiz}`;
     dinoRowQuiz.appendChild(dinoFactsQuiz);
   }
-  populated = true;
-  // let dinoClicked = event.target.;
-  // console.log(dinoClicked);
 }
+
+function checkAnswer(event) {
+  let dinoClicked = event.target.name;
+  console.log(dinoClicked);
+}
+
 renderQuizImages();
+
+dinoQuiz.addEventListener('click', checkAnswer);
