@@ -24,8 +24,8 @@ function rndmNumGen(){
 
 
 function renderDinoImages() {
-  for(let i = 0; i < dinoIndexArray.length; i++){
-    dinoIndexArray[i].wasSeen = false;
+  for(let i = 0; i < app.allDinosaurs.length; i++){
+    app.allDinosaurs[i].wasSeen = false;
   }
 
   // -------- TODO gonna need a for loop to iterate through and set all wasSeen to false incase it was pulled from local storage
@@ -51,7 +51,6 @@ function renderDinoImages() {
 
     // This creates a table row with the image of the dinosaur in it. It also sets the alt to the dinos name so the event listner knows which was clicked.
     let heroImageRow = document.createElement('tr');
-    heroImageRow.id = 'flag';
     heroImageRow.innerHTML = `<img src="${dinoImage}" alt="${dinoTitle}">`;
     initialPage.appendChild(heroImageRow);
 
@@ -61,14 +60,13 @@ function renderDinoImages() {
             
     // this creates a table data cell with the Dinos name
     let dinoHeader = document.createElement('td');
-    dinoHeader.innerText = `Name: ${dinoTitle}`;
+    dinoHeader.innerText = `${dinoTitle}`;
     dinoRow.appendChild(dinoHeader);
             
     // This creates a table data cell with the dinos description
-    let dinoFacts = document.createElement('td');
-    dinoFacts.innerText = `Description: ${dinoDescrip}`;
-    dinoRow.appendChild(dinoFacts);
+    
   }
+  app.saveToLocalStorage();
   populated = true;
 }
 

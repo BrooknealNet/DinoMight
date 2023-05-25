@@ -1,6 +1,8 @@
 // *** Globals ***
 
-let populated = false;
+let guessCorrect = 0;
+let attemps = 0;
+
 
 // creating a new instance of the program
 let app = new AppState();
@@ -12,7 +14,7 @@ let dinoIndexArray = [];
 // *** DOCUMENT WINDOWS ***
 let dinoQuiz = document.getElementById('quiz-images');
 
-function renderQuizImages(){
+function renderQuizImages() {
   for (let i = 0; i < app.allDinosaurs.length; i++) {
 
     // these assign variables the values from the dinosaur objects
@@ -22,25 +24,50 @@ function renderQuizImages(){
 
     // This creates a table row with the image of the dinosaur in it. It also sets the alt to the dinos name so the event listner knows which was clicked.
     let heroImageRowQuiz = document.createElement('tr');
-    heroImageRowQuiz.innerHTML = `<img src="${dinoImageQuiz}" alt="${dinoTitleQuiz}">`;
+    heroImageRowQuiz.setAttribute('id', `${dinoTitleQuiz}`);
+    heroImageRowQuiz.innerHTML = `<img src="${dinoImageQuiz}" title="${dinoTitleQuiz}" alt="${dinoTitleQuiz}">`;
     dinoQuiz.appendChild(heroImageRowQuiz);
 
     // This creates a new row, everything below can be put on the quiz page
     let dinoRowQuiz = document.createElement('tr');
     heroImageRowQuiz.appendChild(dinoRowQuiz);
-            
+
     // this creates a table data cell with the Dinos name
     let dinoHeaderQuiz = document.createElement('td');
-    dinoHeaderQuiz.innerText = `Name: ${dinoTitleQuiz}`;
+    dinoHeaderQuiz.innerText =`${dinoTitleQuiz}`;
     dinoRowQuiz.appendChild(dinoHeaderQuiz);
-            
+
     // This creates a table data cell with the dinos description
     let dinoFactsQuiz = document.createElement('td');
-    dinoFactsQuiz.innerText = `Description: ${dinoDescripQuiz}`;
+    dinoFactsQuiz.innerText = `${dinoDescripQuiz}`;
     dinoRowQuiz.appendChild(dinoFactsQuiz);
   }
-  populated = true;
-  // let dinoClicked = event.target.;
-  // console.log(dinoClicked);
+}
+function checkanswer(event) {
+  let dinoClicked = event.target.title;
+  for (i = 0; i < app.allDinosaurs.length; i++) {
+    if (app.allDinosaurs[i].name == dinoClicked && app.allDinosaurs[i].wasSeen == true) {
+      guessCorrect += 1;
+      document.getElementById(dinoClicked).className = 'correct';
+      break;
+    } else {
+      document.getElementById(dinoClicked).className = 'nicetry';
+    }
+
+  }
+  attemps += 1;
+  calScore();
+}
+
+function calScore() {
+  if (guessCorrect === 5) {
+    let roundScore = {
+      guesses: `${attemps}`,
+      correct: `${guessCorrect}`
+    }
+    app.scores.push(roundScore);
+    app.saveToLocalStorage();
+  }
 }
 renderQuizImages();
+dinoQuiz.addEventListener('click', checkanswer);
