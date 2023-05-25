@@ -28,7 +28,6 @@ function renderDinoImages() {
     app.allDinosaurs[i].wasSeen = false;
   }
 
-  // -------- TODO gonna need a for loop to iterate through and set all wasSeen to false incase it was pulled from local storage
   // this populates an array with randomly selected numbers no higher than the size of the array
   while (displayIndexArray.length < 5) {
    
@@ -71,7 +70,6 @@ function renderDinoImages() {
 
 function startBtnHandler(){
   if (populated === true){
-    // ("#home-imgs tr").remove();
     initialPage.deleteRow(-1);
     initialPage.deleteRow(-1);
     initialPage.deleteRow(-1);
@@ -81,7 +79,4 @@ function startBtnHandler(){
   renderDinoImages();
 }
 
-// -------- TODO this needs to be called on an event listner for the start game button
 startBtn.addEventListener('click', startBtnHandler);
-
-// renderDinoImages();
