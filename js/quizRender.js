@@ -1,4 +1,6 @@
 // *** Globals ***
+let guessCorrect = 0;
+let attempts = 0;
 
 // creating a new instance of the program
 let app = new AppState();
@@ -19,7 +21,7 @@ function renderQuizImages(){
 
     // This creates a table row with the image of the dinosaur in it. It also sets the alt to the dinos name so the event listner knows which was clicked.
     let heroImageRowQuiz = document.createElement('tr');
-    heroImageRowQuiz.classList.add('dino-card');
+    heroImageRowQuiz.setAttribute('id', `${dinoTitleQuiz}`);
     heroImageRowQuiz.innerHTML = `<img src="${dinoImageQuiz}" title="${dinoTitleQuiz}" alt="${dinoTitleQuiz}">`;
     dinoQuiz.appendChild(heroImageRowQuiz);
 
@@ -42,16 +44,30 @@ function renderQuizImages(){
 function checkAnswer(event) {
   let dinoClicked = event.target.title;
   for (let i = 0; i < app.allDinosaurs.length; i++) {
-    console.log(app.allDinosaurs[i]);
-    // if (app.allDinosaurs[i].name === dinoClicked && app.allDinosaurs[i].wasSeen === true) {
-    //   console.log('Correct!');
-    // } else {
-    //   console.log('wrong');
-    // }
+    if (app.allDinosaurs[i].name == dinoClicked && app.allDinosaurs[i].wasSeen == true) {
+      guessCorrect += 1;
+      document.getElementById(dinoClicked).className = 'correct';
+      break;
+    } else {
+      document.getElementById(dinoClicked).className = 'nicetry';
+    }
+  }
+  attempts += 1;
+  calculateScore();
+}
+
+function calculateScore() {
+  if (guessCorrect === 5){
+    let roundScore = {
+      guesses: `${attempts}`,
+      correct: `${guessCorrect}`
+    }
+    app.scores.push(roundScore);
+    app.saveToLocalStorage();
   }
 }
 
 renderQuizImages();
 
-let test = document.getElementsByClassName('dino-card');
-test.addEventListener('click', checkAnswer);
+// let test = document.getElementsByClassName('dino-card');
+dinoQuiz.addEventListener('click', checkAnswer);

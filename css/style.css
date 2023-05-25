@@ -135,6 +135,8 @@ tr>img {
 
 tr {
   width: 200px;
+  padding: 1vw;
+  transition: 350ms;
 }
 
 tr>img:hover {
@@ -150,6 +152,14 @@ tr>img:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.correct {
+  background: #4D9140;
+}
+
+.nicetry {
+  background: #8F8F8F;
 }
 
 /* style sheet 2 */

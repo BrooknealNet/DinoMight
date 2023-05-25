@@ -5,6 +5,7 @@
 // ------ TODO AppState will probably also need an array to store scores in
 function AppState() {
   this.allDinosaurs = [];
+  this.scores = [];
 }
 
 function Dinosaur(name, facts, fileExtension = 'png') {
@@ -31,11 +32,16 @@ AppState.prototype.instantiateDinosaurs = function () {
 
 AppState.prototype.saveToLocalStorage = function () {
   const stringDinosaurs = JSON.stringify(this.allDinosaurs);
+  const stringScores = JSON.stringify(this.scores);
   localStorage.setItem('dinosaurs', stringDinosaurs);
+  localStorage.setItem('scores', stringScores);
 }
   
 AppState.prototype.loadItems = function () {
   const loadedDinosaurs = localStorage.getItem('dinosaurs');
+  const loadedScores = localStorage.getItem('scores');
+  const parsedScores = JSON.parse(loadedScores);
+  this.scores = parsedScores;
   if (loadedDinosaurs){
     const parcedDinosaurs = JSON.parse(loadedDinosaurs);
     this.allDinosaurs = parcedDinosaurs;
