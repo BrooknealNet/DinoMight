@@ -36,7 +36,7 @@ function renderQuizImages(){
             
     // This creates a table data cell with the dinos description
     let dinoFactsQuiz = document.createElement('td');
-    dinoFactsQuiz.innerText = `Description: ${dinoDescripQuiz}`;
+    dinoFactsQuiz.innerText = `${dinoDescripQuiz}`;
     dinoRowQuiz.appendChild(dinoFactsQuiz);
   }
 }

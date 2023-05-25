@@ -160,6 +160,7 @@ tr > tr > td:nth-child(1) {
   width: 14vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 #quiz-images > tr > tr {
