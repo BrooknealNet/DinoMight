@@ -47,7 +47,6 @@ function renderDinoImages() {
     let dinoDescrip = app.allDinosaurs[randomIndex].facts
     // This sets was seen was true so the program will know which were shown on screen
     app.allDinosaurs[randomIndex].wasSeen = true;
-    console.log(app.allDinosaurs[randomIndex]);
     // This creates a table row with the image of the dinosaur in it. It also sets the alt to the dinos name so the event listner knows which was clicked.
     let heroImageRow = document.createElement('tr');
     heroImageRow.innerHTML = `<img src="${dinoImage}" alt="${dinoTitle}">`;
