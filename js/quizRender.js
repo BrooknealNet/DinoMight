@@ -1,6 +1,8 @@
 // *** Globals ***
+
 let guessCorrect = 0;
 let attempts = 0;
+
 
 // creating a new instance of the program
 let app = new AppState();
@@ -11,7 +13,7 @@ app.loadItems();
 // *** DOCUMENT WINDOWS ***
 let dinoQuiz = document.getElementById('quiz-images');
 
-function renderQuizImages(){
+function renderQuizImages() {
   for (let i = 0; i < app.allDinosaurs.length; i++) {
 
     // these assign variables the values from the dinosaur objects
@@ -28,12 +30,12 @@ function renderQuizImages(){
     // This creates a new row, everything below can be put on the quiz page
     let dinoRowQuiz = document.createElement('tr');
     heroImageRowQuiz.appendChild(dinoRowQuiz);
-            
+
     // this creates a table data cell with the Dinos name
     let dinoHeaderQuiz = document.createElement('td');
     dinoHeaderQuiz.innerText = `${dinoTitleQuiz}`;
     dinoRowQuiz.appendChild(dinoHeaderQuiz);
-            
+
     // This creates a table data cell with the dinos description
     let dinoFactsQuiz = document.createElement('td');
     dinoFactsQuiz.innerText = `${dinoDescripQuiz}`;
@@ -44,6 +46,7 @@ function renderQuizImages(){
 function checkAnswer(event) {
   let dinoClicked = event.target.title;
   for (let i = 0; i < app.allDinosaurs.length; i++) {
+
     if (app.allDinosaurs[i].name == dinoClicked && app.allDinosaurs[i].wasSeen == true) {
       guessCorrect += 1;
       document.getElementById(dinoClicked).className = 'correct';
@@ -60,6 +63,7 @@ function calculateScore() {
   if (guessCorrect === 5){
     let roundScore = {
       guesses: `${attempts}`,
+
       correct: `${guessCorrect}`
     }
     app.scores.push(roundScore);
@@ -70,3 +74,4 @@ function calculateScore() {
 renderQuizImages();
 
 dinoQuiz.addEventListener('click', checkAnswer);
+
