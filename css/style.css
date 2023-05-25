@@ -161,6 +161,7 @@ tr > tr > td:nth-child(1) {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 #quiz-images > tr > tr {
@@ -186,6 +187,7 @@ tr > tr > td:nth-child(1) {
 
 .correct {
   background: #4D9140;
+  transform: rotate(360deg);
 }
 
 .nicetry {
