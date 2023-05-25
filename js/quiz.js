@@ -2,8 +2,11 @@
 
 // *** DOCUMENT WINDOWS ***
 let initialPage = document.getElementById('home-imgs');
+let startBtn = document.getElementById('start-btn');
 
 // *** Globals ***
+
+let populated = false;
 
 // creating a new instance of the program
 let app = new AppState();
@@ -18,12 +21,17 @@ function rndmNumGen(){
   return Math.floor(Math.random() * app.allDinosaurs.length);
 }
 
+
+
 function renderDinoImages() {
+  for(let i = 0; i < app.allDinosaurs.length; i++){
+    app.allDinosaurs[i].wasSeen = false;
+  }
 
   // -------- TODO gonna need a for loop to iterate through and set all wasSeen to false incase it was pulled from local storage
-
   // this populates an array with randomly selected numbers no higher than the size of the array
   while (dinoIndexArray.length < 5) {
+   
     let randomDinoIndex = rndmNumGen();
     if (!dinoIndexArray.includes(randomDinoIndex)) {
       dinoIndexArray.push(randomDinoIndex);
@@ -52,15 +60,31 @@ function renderDinoImages() {
             
     // this creates a table data cell with the Dinos name
     let dinoHeader = document.createElement('td');
-    dinoHeader.innerText = `Name: ${dinoTitle}`;
+    dinoHeader.innerText = `${dinoTitle}`;
     dinoRow.appendChild(dinoHeader);
             
     // This creates a table data cell with the dinos description
-    let dinoFacts = document.createElement('td');
-    dinoFacts.innerText = `Description: ${dinoDescrip}`;
-    dinoRow.appendChild(dinoFacts);
+    
   }
+  app.saveToLocalStorage();
+  populated = true;
+}
+
+
+
+function startBtnHandler(){
+  if (populated === true){
+    // ("#home-imgs tr").remove();
+    initialPage.deleteRow(-1);
+    initialPage.deleteRow(-1);
+    initialPage.deleteRow(-1);
+    initialPage.deleteRow(-1);
+    initialPage.deleteRow(-1);
+  }
+  renderDinoImages();
 }
 
 // -------- TODO this needs to be called on an event listner for the start game button
-renderDinoImages();
+startBtn.addEventListener('click', startBtnHandler);
+
+// renderDinoImages();

@@ -1,25 +1,27 @@
 body {
-  background-color:  #FBFAE5;
+  background-color: #FBFAE5;
   color: black;
-  
-}
+  margin: 0;
+  font-size: 18px;
 
+}
 header {
-  font-size:  20px;
+  font-size: 20px;
   background-color: #4D9140;
   color: #FBFAE5;
-  width: 100%;
-}
-
-h1 {
-  padding: 20px;
-  margin: 10px;
-  font-size: 32px;
+  height: max-content;
   text-align: center;
 }
 
-h2{
-  padding: 20px;
+h1 {
+  padding: 7px;
+  margin: 15px;
+  font-size: 32px;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace 
+}
+
+h2 {
   margin: 10px;
   font-size: 32px;
   text-align: center;
@@ -27,99 +29,202 @@ h2{
 
 nav {
   display: flex;
-  padding: 2rem 2rem;
 }
 
 nav ul {
   display: flex;
   list-style: none;
   margin: auto;
+  padding-top: 15 px; 
+  line-height: 1.5; 
 }
 
 nav li {
-  padding-left: 2rem;
+  padding-left: 1rem;
   padding-right: 2rem;
   margin: auto;
-
+  text-align: center;
 }
 
 p {
   text-align: center;
+  padding: 2vw;
+  margin: auto;
 }
 
 
-main{
-  align-items: center;
+main {
+  width: 90%;
+  margin: auto;
 }
 
 #home-start {
- 
-  display: flex;
-  justify-content: space-around;
-  color: #87C7F1;
-}
-
-#start-test {
-  display: flex;
-  justify-content: space-around;
-  color: #87C7F1;
-  padding-top:25%
-}
-
-
-section {
-  padding: 10px;
-  display: flex;
+  width: max-content;
   margin: auto;
+}
+
+#home-start button {
+  align-items: center;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: #FBFAE5;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+
+#home-start button:hover {
+  background-color: #555;
+
+}
+
+#start-quiz {
+  width: max-content;
+  margin: auto;
+  padding-top: 0%;
+  float: inline-start;
+
+}
+
+#start-quiz button {
+  align-items: center;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color:#FBFAE5;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+#start-quiz button:hover {
+  background-color: #555;
+
+}
+
+a {
+  color:#FBFAE5;
+  text-align: center;
 }
 
 #home-imgs {
-  height: 10vw;
-  width: 100%;
-  padding: 5px;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
   margin: auto;
-  justify-content: space-evenly;
-  display: grid;
-  grid-template-columns: repeat(5, 10px [col-start]);
-  
+  display: flex;
+  column-gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
- #test-imgs{
-  height: 10vw;
-  width: 100%;
-  padding: 5px;
-  margin: auto;
-  justify-content: space-evenly;
-  display: grid;
-  grid-template-columns: repeat(10, 10px [col-start]);
+#home-imgs > tr > img {
+  height: 200px;
+  width: 200px;
+  animation: spin-in 1s step-end;
 }
 
-footer {
+#quiz-images > tr > img {
+  height: 200px;
+  width: 200px;
+}
+
+tr {
+  padding: 1vw;
+  transition: 350ms;
+}
+
+tr > img:hover {
+  border: 2px solid #4d9140;
+}
+
+td {
   text-align: center;
-  background-color: #258F28;
-  bottom: 0;
-  position: absolute;
-  width: 100%;
-  height: 30px;
-  padding:10px 10px 0px 10px;
-  margin-bottom:-130px ;
-  text-align: center;
+  vertical-align: middle;
+  padding: .2vw;
+}
+
+tr > tr > td:nth-child(1) {
+  font-weight: 600;
+}
+
+#home-imgs > tr > tr {
+  padding: 1vw;
+  display: flex;
+  justify-content: center;
+}
+
+#quiz-images > tr {
+  width: 14vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#quiz-images > tr > tr {
+  padding: 1vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#quiz-images {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#start-quiz > button > a{
+  text-decoration: none;
+}
+
+.correct {
+  background: #4D9140;
+  transform: rotate(360deg);
+}
+
+.nicetry {
+  background: #8F8F8F;
 }
 
 /* style sheet 2 */
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .card {
+  display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 8px;
-  background-color: #E5E2B6; 
+  background-color: #E5E2B6;
+  width: 300px;
+  display: inline;
 }
+
 
 .button {
   border: none;
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: white;
+  color: #FBFAE5;
   background-color: #000;
   text-align: center;
   cursor: pointer;
@@ -139,8 +244,8 @@ footer {
 .card img {
   display: block;
   margin: 0 auto;
-  width: 80%; 
-  max-width: 250px; 
+  width: 80%;
+  max-width: 250px;
   height: auto;
   padding-top: 30px;
 }
@@ -149,18 +254,66 @@ footer {
   padding: 16px;
 }
 
-.aboutUsSection  {
-  font-size: 24px;
+
+.team-heading {
+  margin: 1px;
+  font-size: 30px;
+  text-align: center;
 }
 
-.card img {
-  display: block;
-  margin: 0 auto;
-  width: px; 
-  height: 280px; 
-}
-
-tr>img {
-  height: 200px;
-  width: 200px;
+@keyframes spin-in {
+  0% {
+    height: 0%;
+    width: 0%;
+  }
+  10% {
+    height: 10%;
+    width: 10%;
+    transform: rotate(36deg);
+  }
+  20% {
+    height: 20%;
+    width: 20%;
+    transform: rotate(72deg);
+  }
+  30% {
+    height: 30%;
+    width: 30%;
+    transform: rotate(108deg);
+  }
+  40% {
+    height: 40%;
+    width: 40%;
+    transform: rotate(144deg);
+  }
+  50% {
+    height: 50%;
+    width: 50%;
+    transform: rotate(180deg);
+  }
+  60% {
+    height: 60%;
+    width: 60%;
+    transform: rotate(216deg);
+  }
+  70% {
+    height: 70%;
+    width: 70%;
+    transform: rotate(252deg);
+  }
+  80% {
+    height: 80%;
+    width: 80%;
+    transform: rotate(288deg);
+  }
+  90% {
+    height: 90%;
+    width: 90%;
+    transform: rotate(324deg);
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+    transform: rotate(360deg);
+  }
 }
