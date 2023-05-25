@@ -13,7 +13,7 @@ let app = new AppState();
 
 // populating that instance with our local save
 app.loadItems();
-let dinoIndexArray = [];
+let displayIndexArray = [];
 
 // *** Helper Functions ***
 
@@ -28,27 +28,26 @@ function renderDinoImages() {
     app.allDinosaurs[i].wasSeen = false;
   }
 
-  // -------- TODO gonna need a for loop to iterate through and set all wasSeen to false incase it was pulled from local storage
   // this populates an array with randomly selected numbers no higher than the size of the array
-  while (dinoIndexArray.length < 5) {
+  while (displayIndexArray.length < 5) {
    
     let randomDinoIndex = rndmNumGen();
-    if (!dinoIndexArray.includes(randomDinoIndex)) {
-      dinoIndexArray.push(randomDinoIndex);
+    if (!displayIndexArray.includes(randomDinoIndex)) {
+      displayIndexArray.push(randomDinoIndex);
     }
   }
 
   // itterating through the array we just created, assigning those numbers to dinosaurs by pulling the first from the array
   for (let i = 0; i < 5; i++) {
-    let randomIndex = dinoIndexArray.shift()
+    let randomIndex = displayIndexArray.shift()
 
     // these assign variables the values from the dinosaur objects
     let dinoImage = app.allDinosaurs[randomIndex].image
     let dinoTitle = app.allDinosaurs[randomIndex].name
     let dinoDescrip = app.allDinosaurs[randomIndex].facts
     // This sets was seen was true so the program will know which were shown on screen
-    app.allDinosaurs[i].wasSeen = true;
-
+    app.allDinosaurs[randomIndex].wasSeen = true;
+    console.log(app.allDinosaurs[randomIndex]);
     // This creates a table row with the image of the dinosaur in it. It also sets the alt to the dinos name so the event listner knows which was clicked.
     let heroImageRow = document.createElement('tr');
     heroImageRow.innerHTML = `<img src="${dinoImage}" alt="${dinoTitle}">`;
@@ -62,9 +61,6 @@ function renderDinoImages() {
     let dinoHeader = document.createElement('td');
     dinoHeader.innerText = `${dinoTitle}`;
     dinoRow.appendChild(dinoHeader);
-            
-    // This creates a table data cell with the dinos description
-    
   }
   app.saveToLocalStorage();
   populated = true;
@@ -74,7 +70,6 @@ function renderDinoImages() {
 
 function startBtnHandler(){
   if (populated === true){
-    // ("#home-imgs tr").remove();
     initialPage.deleteRow(-1);
     initialPage.deleteRow(-1);
     initialPage.deleteRow(-1);
@@ -84,7 +79,4 @@ function startBtnHandler(){
   renderDinoImages();
 }
 
-// -------- TODO this needs to be called on an event listner for the start game button
 startBtn.addEventListener('click', startBtnHandler);
-
-// renderDinoImages();
