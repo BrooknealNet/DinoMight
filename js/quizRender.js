@@ -14,6 +14,14 @@ app.loadItems();
 let dinoQuiz = document.getElementById('quiz-images');
 
 function renderQuizImages() {
+
+  let elapsedTimeElement = document.getElementById("elapsed-time");
+let startTime = localStorage.getItem("startTime");
+let endTime = Date.now();
+let elapsedTime = (endTime - startTime) / 1000;
+elapsedTimeElement.textContent = `Time Elapsed: ${elapsedTime} seconds`;
+
+
   for (let i = 0; i < app.allDinosaurs.length; i++) {
 
     // these assign variables the values from the dinosaur objects

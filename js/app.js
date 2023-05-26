@@ -47,10 +47,24 @@ AppState.prototype.loadItems = function () {
   }
 }
 
-//music for startButton
-var audio = document.getElementById("myAudio");
-var startButton = document.getElementById("start-btn");
+//music for startButton and time elapsed
+let audio = document.getElementById("myAudio");
+let startButton = document.getElementById("start-btn");
+let startQuizButton = document.getElementById("start-quiz-btn");
+
 
 startButton.addEventListener("click", function() {
   audio.play();
+  startTime = Date.now();
+  localStorage.setItem("startTime", startTime);
+});
+
+
+
+let startTime;
+
+startQuizButton.addEventListener("click", function() {
+  let endTime = Date.now();
+  let elapsedTime = (endTime - startTime) / 1000; 
+  console.log(`Time elapsed: ${elapsedTime} seconds`);
 });
