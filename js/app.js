@@ -47,4 +47,10 @@ AppState.prototype.loadItems = function () {
   }
 }
 
-// *** Executables ***
+//music for startButton
+var audio = document.getElementById("myAudio");
+var startButton = document.getElementById("start-btn");
+
+startButton.addEventListener("click", function() {
+  audio.play();
+});
